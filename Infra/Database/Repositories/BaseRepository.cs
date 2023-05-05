@@ -7,17 +7,17 @@ namespace Infra.Database.Repositories;
 public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
 {
    protected readonly ChattyDbContext DbContext;
-   protected readonly DbSet<T> UserAccounts;
+   protected readonly DbSet<T> DataAccess;
 
    protected BaseRepository(ChattyDbContext dbContext)
    {
       DbContext = dbContext;
-      UserAccounts = DbContext.Set<T>();
+      DataAccess = DbContext.Set<T>();
    }
 
    public async Task InsertAsync(T entity)
    {
-      await UserAccounts.AddAsync(entity);
+      await DataAccess.AddAsync(entity);
       await DbContext.SaveChangesAsync();
    }
 }
