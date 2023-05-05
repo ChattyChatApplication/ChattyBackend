@@ -1,4 +1,5 @@
-﻿using Infra.Configs;
+﻿using Domain.Configs;
+using Infra.Configs;
 
 namespace Api.Configs;
 
@@ -9,8 +10,9 @@ public static class DependencyInjection
       services.AddControllers();
       // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
       services.AddEndpointsApiExplorer();
-      services.AddSwaggerGen();      
-      
+      services.AddSwaggerGen();
+
       services.AddInfra(configuration);
+      services.AddDomain(configuration);
    }
 }
