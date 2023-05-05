@@ -14,7 +14,7 @@ public static class DependencyInjection
    private static void AddServices(this IServiceCollection services)
    {
       services.AddScoped<IUserAccountFactory, UserAccountFactory>();
-      // TODO services.AddScoped<IPasswordHashService, PasswordHashService>();
+      services.AddScoped<IPasswordHashService, PasswordHashService>();
       services.AddScoped<IAuthService, AuthService>();
    }
 }
