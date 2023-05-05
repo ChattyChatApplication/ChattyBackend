@@ -1,6 +1,6 @@
 ﻿using Core.ValueObjects.Account;
 
-namespace Domain.Services.password_hash_service;
+namespace Domain.Services;
 
 public interface IPasswordHashService
 {
