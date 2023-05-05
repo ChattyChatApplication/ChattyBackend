@@ -5,7 +5,7 @@ namespace Domain.Contracts.Database.Repositories;
 
 public interface IUserAccountRepository : IBaseRepository<UserAccount>
 {
-   public bool IsUsernameExistAsync(Username email);
+   public Task<bool> IsUsernameExistAsync(Username email);
 
-   public bool IsEmailExistAsync(Email email);
+   public Task<bool> IsEmailExistAsync(Email email);
 }
