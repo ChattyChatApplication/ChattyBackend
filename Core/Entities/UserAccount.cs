@@ -4,7 +4,7 @@ namespace Core.Entities;
 
 public class UserAccount : BaseEntity
 {
-   public UserAccount(Guid id, Username username, Email email, PasswordHash passwordHash) : base(id)
+   public UserAccount(Username username, Email email, PasswordHash passwordHash)
    {
       Username = username;
       Email = email;

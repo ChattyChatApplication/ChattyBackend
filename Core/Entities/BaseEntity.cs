@@ -2,14 +2,9 @@
 
 public abstract class BaseEntity
 {
-   public required Guid Id { get; init; }
+   public Guid Id { get; init; } = Guid.NewGuid();
 
    public DateTime Created { get; init; }
    
    public DateTime Updated { get; set; }
-
-   protected BaseEntity(Guid id)
-   {
-      Id = id;
-   }
 }
