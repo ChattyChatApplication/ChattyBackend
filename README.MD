@@ -35,3 +35,10 @@
 17 Delegates
 
 18 Nested types
+
+
+### used pattern
+
+factory
+
+mediator
