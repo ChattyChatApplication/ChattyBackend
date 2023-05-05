@@ -17,6 +17,9 @@ public readonly struct Username
    #region static
    
    public static readonly Regex UsernameRegex = new Regex("^[a-zA-Z][a-zA-Z0-9_-]{2,30}$");
+
+   public static readonly string MessageRegex =
+      "usernames should start with a letter and contain 2 to 30 characters that can be letters, digits, underscores or hyphens.";
    
    public static bool IsValid(string value)
    {
