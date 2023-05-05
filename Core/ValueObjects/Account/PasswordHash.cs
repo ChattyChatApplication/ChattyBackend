@@ -16,7 +16,7 @@ public readonly struct PasswordHash
 
    #region static
 
-   private static readonly Regex PasswordHashRegex = new Regex(".");
+   public static readonly Regex PasswordHashRegex = new Regex(".");
 
    public static bool IsValid(string value)
    {

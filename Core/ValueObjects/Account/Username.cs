@@ -16,7 +16,7 @@ public readonly struct Username
 
    #region static
    
-   private static readonly Regex UsernameRegex = new Regex("^[a-zA-Z][a-zA-Z0-9_-]{2,30}$");
+   public static readonly Regex UsernameRegex = new Regex("^[a-zA-Z][a-zA-Z0-9_-]{2,30}$");
    
    public static bool IsValid(string value)
    {

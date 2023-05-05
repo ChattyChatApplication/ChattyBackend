@@ -16,7 +16,7 @@ public readonly struct Email
 
    #region static
 
-   private static readonly Regex EmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
+   public static readonly Regex EmailRegex = new Regex("^\\S+@\\S+\\.\\S+$");
 
    public static bool IsValid(string value)
    {
