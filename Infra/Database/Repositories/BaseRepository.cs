@@ -4,20 +4,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infra.Database.Repositories;
 
-public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
+public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
 {
-   private readonly ChattyDbContext _dbContext;
-   private readonly DbSet<T> _userAccounts;
+   protected readonly ChattyDbContext DbContext;
+   protected readonly DbSet<T> UserAccounts;
 
-   public BaseRepository(ChattyDbContext dbContext)
+   protected BaseRepository(ChattyDbContext dbContext)
    {
-      _dbContext = dbContext;
-      _userAccounts = _dbContext.Set<T>();
+      DbContext = dbContext;
+      UserAccounts = DbContext.Set<T>();
    }
 
    public async Task InsertAsync(T entity)
    {
-      await _userAccounts.AddAsync(entity);
-      await _dbContext.SaveChangesAsync();
+      await UserAccounts.AddAsync(entity);
+      await DbContext.SaveChangesAsync();
    }
 }
