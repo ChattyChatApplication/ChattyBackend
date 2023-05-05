@@ -41,4 +41,14 @@ public readonly struct Username
    {
       return new Username(usernameString);
    }
+
+   public static bool operator ==(Username usn1, Username uns2)
+   {
+      return usn1.Value.Equals(uns2.Value);
+   }
+
+   public static bool operator !=(Username usn1, Username uns2)
+   {
+      return !(usn1.Value.Equals(uns2.Value));
+   }
 }
