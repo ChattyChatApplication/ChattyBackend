@@ -41,4 +41,14 @@ public readonly struct Email
    {
       return new Email(emailString);
    }
+
+   public static bool operator ==(Email eml1, Email eml2)
+   {
+      return eml1.Value.Equals(eml2.Value);
+   }
+
+   public static bool operator !=(Email eml1, Email eml2)
+   {
+      return !(eml1.Value.Equals(eml2.Value));
+   }
 }
