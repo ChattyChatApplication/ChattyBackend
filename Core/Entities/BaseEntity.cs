@@ -2,7 +2,7 @@
 
 public abstract class BaseEntity
 {
-   public Guid Id { get; init; }
+   public required Guid Id { get; init; }
 
    public DateTime Created { get; init; }
    
