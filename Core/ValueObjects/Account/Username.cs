@@ -3,7 +3,7 @@ using Core.Exceptions;
 
 namespace Core.ValueObjects.Account;
 
-public readonly partial struct Username
+public readonly struct Username
 {
    public Username(string value)
    {
@@ -15,11 +15,8 @@ public readonly partial struct Username
    }
 
    #region static
-
-   [GeneratedRegex("^[a-zA-Z][a-zA-Z0-9_-]{2,30}$")]
-   private static partial Regex MyRegex();
-
-   private static Regex UsernameRegex { get; } = MyRegex();
+   
+   private static readonly Regex UsernameRegex = new Regex("^[a-zA-Z][a-zA-Z0-9_-]{2,30}$");
    
    public static bool IsValid(string value)
    {
