@@ -8,7 +8,7 @@ public abstract class BaseEntity
    
    public DateTime Updated { get; set; }
 
-   private protected BaseEntity(Guid id)
+   protected BaseEntity(Guid id)
    {
       Id = id;
    }
