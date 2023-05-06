@@ -34,7 +34,7 @@ namespace Infra.Database.Migrations
 
                     b.Property<DateTime>("Inserted")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -42,7 +42,7 @@ namespace Infra.Database.Migrations
 
                     b.Property<DateTime>("Updated")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp");
 
                     b.Property<string>("Username")
                         .IsRequired()

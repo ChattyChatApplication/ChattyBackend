@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infra.Database.Migrations
 {
     [DbContext(typeof(ChattyDbContext))]
-    [Migration("20230505105939_Create_UserAccount")]
+    [Migration("20230506005232_Create_UserAccount")]
     partial class Create_UserAccount
     {
         /// <inheritdoc />
@@ -37,7 +37,7 @@ namespace Infra.Database.Migrations
 
                     b.Property<DateTime>("Inserted")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -45,7 +45,7 @@ namespace Infra.Database.Migrations
 
                     b.Property<DateTime>("Updated")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp");
 
                     b.Property<string>("Username")
                         .IsRequired()
