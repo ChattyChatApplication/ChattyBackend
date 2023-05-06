@@ -1,4 +1,5 @@
 ﻿using App.Dtos.Requests;
+using App.Features;
 using App.Validations;
 using Domain.Contracts.Database.Repositories;
 using FluentValidation;
@@ -13,6 +14,7 @@ public static class DependencyInjection
    public static void AddApp(this IServiceCollection services, IConfiguration configuration)
    {
       services.AddRepositories();
+      services.AddFeatures();
       services.AddValidators();
    }
 
@@ -24,5 +26,10 @@ public static class DependencyInjection
    private static void AddValidators(this IServiceCollection services)
    {
       services.AddScoped<IValidator<SignUpRequestDto>, SignUpRequestValidator>();
+   }
+
+   private static void AddFeatures(this IServiceCollection services)
+   {
+      services.AddScoped<ISignUpFeat, SignUpFeat>();
    }
 }
