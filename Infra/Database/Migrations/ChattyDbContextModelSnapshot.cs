@@ -34,7 +34,8 @@ namespace Infra.Database.Migrations
 
                     b.Property<DateTime>("Inserted")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp");
+                        .HasColumnType("timestamp")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
@@ -42,7 +43,8 @@ namespace Infra.Database.Migrations
 
                     b.Property<DateTime>("Updated")
                         .ValueGeneratedOnAddOrUpdate()
-                        .HasColumnType("timestamp");
+                        .HasColumnType("timestamp")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.Property<string>("Username")
                         .IsRequired()

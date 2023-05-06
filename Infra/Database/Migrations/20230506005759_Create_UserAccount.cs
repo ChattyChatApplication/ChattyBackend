@@ -19,8 +19,8 @@ namespace Infra.Database.Migrations
                     Username = table.Column<string>(type: "varchar(30)", nullable: false),
                     Email = table.Column<string>(type: "varchar", nullable: false),
                     PasswordHash = table.Column<string>(type: "varchar", nullable: false),
-                    Inserted = table.Column<DateTime>(type: "timestamp", nullable: false),
-                    Updated = table.Column<DateTime>(type: "timestamp", nullable: false)
+                    Inserted = table.Column<DateTime>(type: "timestamp", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
+                    Updated = table.Column<DateTime>(type: "timestamp", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP")
                 },
                 constraints: table =>
                 {
