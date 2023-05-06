@@ -60,10 +60,14 @@ public class UserAccountConfig : IEntityTypeConfiguration<UserAccount>
 
       builder
          .Property(ett => ett.Inserted)
+         .HasColumnType("timestamp")
+         .HasDefaultValueSql("CURRENT_TIMESTAMP")
          .ValueGeneratedOnAdd();
       
       builder
          .Property(ett => ett.Updated)
+         .HasColumnType("timestamp")
+         .HasDefaultValueSql("CURRENT_TIMESTAMP")
          .ValueGeneratedOnAddOrUpdate();
 
       #endregion
