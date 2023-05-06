@@ -16,5 +16,6 @@ public static class DependencyInjection
       services.AddScoped<IUserAccountFactory, UserAccountFactory>();
       services.AddScoped<IPasswordHashService, PasswordHashService>();
       services.AddScoped<IAuthService, AuthService>();
+      services.AddScoped<IAuthTokenService, AuthTokenService>();
    }
 }
