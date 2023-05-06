@@ -5,5 +5,5 @@ namespace App.Features;
 
 public interface ISignUpFeat
 {
-   public Task<AuthToken> Handle(SignUpRequestDto signUpRequest);
+   public Task<AuthToken> HandleAsync(SignUpRequestDto signUpRequest);
 }

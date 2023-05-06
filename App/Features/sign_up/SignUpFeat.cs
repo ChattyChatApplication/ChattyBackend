@@ -19,7 +19,7 @@ public class SignUpFeat : ISignUpFeat
    }
 
    // TODO send email, verify OTP
-   public async Task<AuthToken> Handle(SignUpRequestDto signUpRequest)
+   public async Task<AuthToken> HandleAsync(SignUpRequestDto signUpRequest)
    {
       var username = new Username(signUpRequest.Username);
       var email = new Email(signUpRequest.Email);
