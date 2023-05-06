@@ -1,4 +1,5 @@
-﻿using Domain.Configs;
+﻿using App.Configs;
+using Domain.Configs;
 using Infra.Configs;
 
 namespace Api.Configs;
@@ -14,5 +15,6 @@ public static class DependencyInjection
 
       services.AddInfra(configuration);
       services.AddDomain(configuration);
+      services.AddApp(configuration);
    }
 }
