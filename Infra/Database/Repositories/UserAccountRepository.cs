@@ -19,11 +19,21 @@ public class UserAccountRepository : BaseRepository<UserAccount>, IUserAccountRe
       return matchingUsername is not null;
    }
 
+   public Task<bool> IsUsernameExistAsync(string username)
+   {
+      throw new NotImplementedException();
+   }
+
    public async Task<bool> IsEmailExistAsync(Email email)
    {
       var matchingEmail = await DataAccess
          .SingleOrDefaultAsync(uac => uac.Email == email);
 
       return matchingEmail is not null;
+   }
+
+   public Task<bool> IsEmailExistAsync(string email)
+   {
+      throw new NotImplementedException();
    }
 }
