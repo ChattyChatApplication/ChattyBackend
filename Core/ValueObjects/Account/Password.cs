@@ -18,6 +18,8 @@ public readonly struct Password
 
    public static readonly Regex PasswordRegex = new Regex("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{8,}$");
 
+   public static readonly string RegexMessage = "At least 8 characters long, containing at least one lowercase letter, one uppercase letter, and one digit";
+   
    public static bool IsValid(string value)
    {
       return PasswordRegex.IsMatch(value);
