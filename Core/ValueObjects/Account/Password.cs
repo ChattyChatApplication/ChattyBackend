@@ -7,16 +7,13 @@ public readonly struct Password
 {
    public Password(string value)
    {
-      if (!IsValid(value))
-      {
-         throw new InvalidPasswordException(value);
-      }
+      if (!IsValid(value)) throw new InvalidPasswordException(value);
       Value = value;
    }
 
    #region static
 
-   public static readonly Regex PasswordRegex = new Regex(@"^.{6,}$");
+   public static readonly Regex PasswordRegex = new (@"^.{6,}$");
 
    public static readonly string RegexMessage = "At least 8 characters long, containing at least one lowercase letter, one uppercase letter, and one digit";
    
