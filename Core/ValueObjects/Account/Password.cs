@@ -20,27 +20,15 @@ public readonly struct Password
 
    public static readonly string RegexMessage = "At least 8 characters long, containing at least one lowercase letter, one uppercase letter, and one digit";
    
-   public static bool IsValid(string value)
-   {
-      return PasswordRegex.IsMatch(value);
-   }
+   public static bool IsValid(string value) => PasswordRegex.IsMatch(value);
 
    #endregion
 
    private string Value { get; init; }
 
-   public override string ToString()
-   {
-      return Value;
-   }
+   public override string ToString() => Value;
 
-   public static explicit operator string(Password password)
-   {
-      return password.Value;
-   }
+   public static explicit operator string(Password password) => password.Value;
 
-   public static explicit operator Password(string passwordString)
-   {
-      return new Password(passwordString);
-   }
+   public static explicit operator Password(string passwordString) => new(passwordString);
 }
