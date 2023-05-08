@@ -11,9 +11,19 @@ public class UserAccount : BaseEntity
       PasswordHash = passwordHash;
    }
 
+   #region columns
+
    public Username Username { get; init; }
    
    public Email Email { get; init; }
 
    public PasswordHash PasswordHash { get; set; }
+
+   #endregion
+
+   #region relationships
+
+   public UserProfile? Profile { get; set; }
+
+   #endregion
 }
