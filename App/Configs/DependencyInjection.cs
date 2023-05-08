@@ -1,6 +1,4 @@
-﻿using App.Dtos.Requests;
-using App.Features;
-using App.Validations;
+﻿using App.Features;
 using Domain.Contracts.Database.Repositories;
 using FluentValidation;
 using Infra.Database.Repositories;

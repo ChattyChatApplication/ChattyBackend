@@ -1,4 +1,4 @@
-﻿namespace App.Dtos.Requests;
+﻿namespace App.Features;
 
 public class SignUpRequestDto
 {

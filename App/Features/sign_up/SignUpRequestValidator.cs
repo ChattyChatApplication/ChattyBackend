@@ -1,9 +1,8 @@
-﻿using App.Dtos.Requests;
-using Core.ValueObjects.Account;
+﻿using Core.ValueObjects.Account;
 using Domain.Contracts.Database.Repositories;
 using FluentValidation;
 
-namespace App.Validations;
+namespace App.Features;
 
 public class SignUpRequestValidator : AbstractValidator<SignUpRequestDto>
 {

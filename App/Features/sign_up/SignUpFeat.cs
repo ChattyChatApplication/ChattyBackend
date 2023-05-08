@@ -1,7 +1,7 @@
-﻿using App.Dtos.Requests;
-using Core.ValueObjects.Account;
+﻿using Core.ValueObjects.Account;
 using Domain.Contracts.Database.Repositories;
 using Domain.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace App.Features;
 
@@ -18,16 +18,17 @@ public class SignUpFeat : ISignUpFeat
       _authTokenService = authTokenService;
    }
 
-   // TODO send email, verify OTP
-   public async Task<AuthToken> HandleAsync(SignUpRequestDto signUpRequest)
-   {
-      var username = new Username(signUpRequest.Username);
-      var email = new Email(signUpRequest.Email);
-      var password = new Password(signUpRequest.Password);
-
-      var newAccount = await _userAccountFactory.CreateUserAccountAsync(username, email, password);
-      await _userAccountRepository.InsertAsync(newAccount);
-
-      return _authTokenService.CreateAuthToken(newAccount);
-   }
+   // // TODO send email, verify OTP
+   // public async Task<Results<>> HandleAsync(SignUpRequestDto signUpRequest)
+   // {
+   //    var username = new Username(signUpRequest.Username);
+   //    var email = new Email(signUpRequest.Email);
+   //    var password = new Password(signUpRequest.Password);
+   //
+   //    var newAccount = await _userAccountFactory.CreateUserAccountAsync(username, email, password);
+   //    await _userAccountRepository.InsertAsync(newAccount);
+   //
+   //    throw new NotImplementedException();
+   //    // return _authTokenService.CreateAuthToken(newAccount);
+   // }
 }

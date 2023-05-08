@@ -1,9 +1,8 @@
-﻿using App.Dtos.Requests;
-using Domain.Services;
+﻿using Domain.Services;
 
 namespace App.Features;
 
 public interface ISignUpFeat
 {
-   public Task<AuthToken> HandleAsync(SignUpRequestDto signUpRequest);
+   // public Task<AuthToken> HandleAsync(SignUpRequestDto signUpRequest);
 }
