@@ -33,4 +33,6 @@ public readonly struct Name
    public static bool operator ==(Name n1, Name n2) => n1.Value.Equals(n2.Value);
 
    public static bool operator !=(Name n1, Name n2) => !n1.Value.Equals(n2.Value);
+
+   public override string ToString() => Value;
 }
