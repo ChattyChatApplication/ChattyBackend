@@ -57,6 +57,16 @@ public class UserAccountConfig : IEntityTypeConfiguration<UserAccount>
 
       #endregion
 
+      #region relationships
+
+      builder
+         .HasOne(uac => uac.Profile)
+         .WithOne(prf => prf.Account)
+         .HasForeignKey<UserProfile>(prf => prf.AccountId)
+         .IsRequired();
+
+      #endregion
+
       #region auto generates
 
       builder
