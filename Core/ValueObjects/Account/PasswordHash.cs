@@ -7,7 +7,7 @@ public readonly struct PasswordHash
 {
    public PasswordHash(string value)
    {
-      if (!IsValid(value)) throw new InvalidPasswordHashException(value);
+      if (!IsValid(value)) throw new InvalidPasswordHashFormatException(value);
       Value = value;
    }
 

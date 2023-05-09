@@ -7,7 +7,7 @@ public readonly struct Username
 {
    public Username(string value)
    {
-      if (!IsValid(value)) throw new InvalidUsernameException(value);
+      if (!IsValid(value)) throw new InvalidUsernameFormatException(value);
       Value = value;
    }
 

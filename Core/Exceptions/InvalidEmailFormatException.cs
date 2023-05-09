@@ -1,8 +1,8 @@
 ﻿namespace Core.Exceptions;
 
-public class InvalidEmailException : Exception
+public class InvalidEmailFormatException : Exception
 {
-   public InvalidEmailException(string? email) : base(email)
+   public InvalidEmailFormatException(string? email) : base(email)
    {
    }
 

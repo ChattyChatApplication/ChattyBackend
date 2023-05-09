@@ -7,7 +7,7 @@ public readonly struct Password
 {
    public Password(string value)
    {
-      if (!IsValid(value)) throw new InvalidPasswordException(value);
+      if (!IsValid(value)) throw new InvalidPasswordFormatException(value);
       Value = value;
    }
 

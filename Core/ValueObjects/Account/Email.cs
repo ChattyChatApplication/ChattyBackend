@@ -7,7 +7,7 @@ public readonly struct Email
 {
    public Email(string value)
    {
-      if (!IsValid(value)) throw new InvalidEmailException(value);
+      if (!IsValid(value)) throw new InvalidEmailFormatException(value);
       Value = value;
    }
 
