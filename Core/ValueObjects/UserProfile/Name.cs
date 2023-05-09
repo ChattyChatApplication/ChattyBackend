@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using Core.Exceptions;
 
 namespace Core.ValueObjects.UserProfile;
 
@@ -6,7 +7,11 @@ public readonly struct Name
 {
    public string Value { get; init; }
 
-   public Name(string value) => Value = value;
+   public Name(string value)
+   {
+      if (!IsValid(value)) throw new InvalidNameFormatException();
+      Value = value;
+   }
 
    #region static
    
