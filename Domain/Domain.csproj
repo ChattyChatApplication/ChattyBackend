@@ -15,4 +15,8 @@
       <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0-preview.3.23174.8" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Configs\" />
+    </ItemGroup>
+
 </Project>

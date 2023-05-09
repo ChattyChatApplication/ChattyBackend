@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Configs\" />
       <Folder Include="Dtos\Requests\" />
       <Folder Include="Validations\" />
     </ItemGroup>
