@@ -1,8 +1,8 @@
 ﻿using Core.Entities;
+using Core.ValueObjects.Commons;
 using Core.ValueObjects.UserProfile;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Path = Core.ValueObjects.Commons.Path;
 
 namespace Infra.Database.EntityConfigs;
 
@@ -39,7 +39,7 @@ public class UserProfileConfig : IEntityTypeConfiguration<UserProfile>
          .Property(prf => prf.AvatarUri)
          .HasConversion(
             avatarUri => avatarUri.ToString(),
-            value => (Path)value
+            value => (FilePath)value
          )
          .IsRequired();
 

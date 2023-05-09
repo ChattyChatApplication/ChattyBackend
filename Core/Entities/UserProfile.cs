@@ -1,18 +1,18 @@
-﻿using Core.ValueObjects.UserProfile;
-using Path = Core.ValueObjects.Commons.Path;
+﻿using Core.ValueObjects.Commons;
+using Core.ValueObjects.UserProfile;
 
 namespace Core.Entities;
 
 public class UserProfile : BaseEntity
 {
-   public UserProfile(Name fullname, Path avatarUri, Guid accountId)
+   public UserProfile(Guid accountId, Name fullname, FilePath avatarUri)
    {
+      AccountId = accountId;
       Fullname = fullname;
       AvatarUri = avatarUri;
-      AccountId = accountId;
    }
 
-   public UserProfile(Name fullname, Path avatarUri)
+   public UserProfile(Name fullname, FilePath avatarUri)
    {
       Fullname = fullname;
       AvatarUri = avatarUri;
@@ -22,7 +22,7 @@ public class UserProfile : BaseEntity
 
    public Name Fullname { get; set; }
 
-   public Path AvatarUri { get; set; }
+   public FilePath AvatarUri { get; set; }
 
    #endregion
 
