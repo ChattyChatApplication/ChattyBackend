@@ -8,6 +8,7 @@ namespace Infra.Database;
 public class ChattyDbContext : DbContext, IChattyDbContext
 {
    public DbSet<UserAccount> UserAccounts { get; set; } = null!;
+   public DbSet<UserProfile> UserProfiles { get; set; } = null!;
    
    public ChattyDbContext(DbContextOptions options) : base(options)
    {
