@@ -1,5 +1,6 @@
 ﻿using Core.Entities;
 using Core.ValueObjects.Account;
+using Core.ValueObjects.Commons;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

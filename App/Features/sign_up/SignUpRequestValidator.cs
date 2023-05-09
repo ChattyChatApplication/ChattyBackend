@@ -1,4 +1,5 @@
 ﻿using Core.ValueObjects.Account;
+using Core.ValueObjects.Commons;
 using Domain.Contracts.Database.Repositories;
 using FluentValidation;
 
@@ -9,10 +10,12 @@ public class SignUpRequestValidator : AbstractValidator<SignUpRequestDto>
    [Obsolete("Obsolete")]
    public SignUpRequestValidator(IUserAccountRepository userAccountRepository)
    {
+      // TODO redesign validation
+      
       RuleFor(sur => sur.Username)
          .Cascade(CascadeMode.StopOnFirstFailure)
          .Must(Username.IsValid)
-         .WithMessage(Username.MessageRegex)
+         .WithMessage("")
          .MustAsync(async (usn, _) => !await userAccountRepository.IsUsernameExistAsync((Username)usn))
          .WithMessage("username is duplicate");
 

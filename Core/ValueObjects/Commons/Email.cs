@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 using Core.Exceptions;
 
-namespace Core.ValueObjects.Account;
+namespace Core.ValueObjects.Commons;
 
 public readonly struct Email
 {

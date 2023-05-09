@@ -13,7 +13,7 @@ public readonly struct Path
    /// <summary>
    /// Validates the URI value.
    /// </summary>
-   public static readonly Regex UriRegex = new(@"^(https?|ftp)://[^\s/$.?#].[^\s]*$");
+   public static readonly Regex UriRegex = new(@"");
 
    public static bool IsValid(string value) => UriRegex.IsMatch(value);
 
