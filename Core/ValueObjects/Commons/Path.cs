@@ -26,4 +26,6 @@ public readonly struct Path
    public static bool operator ==(Path p1, Path p2) => p1.Value.Equals(p2.Value);
 
    public static bool operator !=(Path p1, Path p2) => !p1.Value.Equals(p2.Value);
+
+   public override string ToString() => Value;
 }
