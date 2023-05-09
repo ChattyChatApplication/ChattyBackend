@@ -18,6 +18,5 @@ public abstract class BaseRepository<T> : IBaseRepository<T> where T : BaseEntit
    public async Task InsertAsync(T entity)
    {
       await DataAccess.AddAsync(entity);
-      await DbContext.SaveChangesAsync();
    }
 }
