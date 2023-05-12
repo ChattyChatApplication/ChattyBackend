@@ -1,12 +1,10 @@
 ﻿using App.Features;
 using Domain.Contracts.Database;
 using Domain.Contracts.Database.Repositories;
-using Domain.Contracts.Jwt;
 using Domain.Services;
 using FluentValidation;
 using Infra.Database;
 using Infra.Database.Repositories;
-using Infra.Jwt;
 using Microsoft.EntityFrameworkCore;
 
 namespace Api.Configs;
@@ -44,7 +42,7 @@ public static class DependencyInjection
 
    private static void AddApp(this IServiceCollection services)
    {
-      services.AddScoped<IValidator<SignUpRequestDto>, SignUpRequestValidator>();
+      services.AddScoped<IValidator<SignUpRequestDto>, SignUpRequestDtoValidator>();
 
       services.AddScoped<ISignUpFeat, SignUpFeat>();
    }
@@ -54,7 +52,5 @@ public static class DependencyInjection
       services.AddScoped<IChattyDbContext, ChattyDbContext>();
 
       services.AddScoped<IUserAccountRepository, UserAccountRepository>();
-
-      services.AddScoped<IJwtHelper, JwtHelper>();
    }
 }
