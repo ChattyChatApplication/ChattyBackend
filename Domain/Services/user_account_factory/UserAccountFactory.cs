@@ -1,6 +1,7 @@
 ﻿using Core.Entities;
 using Core.ValueObjects.Account;
 using Core.ValueObjects.Commons;
+using Domain.Contracts.Database;
 using Domain.Contracts.Database.Repositories;
 using Domain.Exceptions;
 
@@ -11,9 +12,9 @@ public class UserAccountFactory : IUserAccountFactory
    private readonly IUserAccountRepository _userAccountRepository;
    private readonly IPasswordHashService _passwordHashService;
 
-   public UserAccountFactory(IUserAccountRepository userAccountRepository, IPasswordHashService passwordHashService)
+   public UserAccountFactory(IPasswordHashService passwordHashService, IChattyDbContext chattyDbContext)
    {
-      _userAccountRepository = userAccountRepository;
+      _userAccountRepository = chattyDbContext.UserAccountRepository();
       _passwordHashService = passwordHashService;
    }
 
