@@ -58,7 +58,7 @@ namespace Infra.Database.Migrations
                     b.HasIndex("Username")
                         .IsUnique();
 
-                    b.ToTable("UserAccounts");
+                    b.ToTable("UserAccounts", (string)null);
                 });
 
             modelBuilder.Entity("Core.Entities.UserProfile", b =>
@@ -96,7 +96,7 @@ namespace Infra.Database.Migrations
                     b.HasIndex("AvatarUri")
                         .IsUnique();
 
-                    b.ToTable("UserProfiles");
+                    b.ToTable("UserProfiles", (string)null);
                 });
 
             modelBuilder.Entity("Core.Entities.UserProfile", b =>
