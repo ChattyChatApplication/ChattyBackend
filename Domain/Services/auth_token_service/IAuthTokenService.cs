@@ -1,8 +1,6 @@
-﻿using Core.Entities;
-
-namespace Domain.Services;
+﻿namespace Domain.Services;
 
 public interface IAuthTokenService
 {
-   public AuthToken CreateAuthToken(UserAccount userAccount);
+   public AuthToken CreateAuthToken(Guid accountId);
 }
