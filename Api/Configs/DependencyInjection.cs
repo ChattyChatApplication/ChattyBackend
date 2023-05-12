@@ -50,7 +50,5 @@ public static class DependencyInjection
    private static void AddDomainInfraContract(this IServiceCollection services)
    {
       services.AddScoped<IChattyDbContext, ChattyDbContext>();
-
-      services.AddScoped<IUserAccountRepository, UserAccountRepository>();
    }
 }
