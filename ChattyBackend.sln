@@ -10,6 +10,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{3CE36870-1E86-4151-9E19-AFCA03AE8EB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6C978CC9-B52E-4563-B4D2-585CF4FE7BB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.Domain", "Test.Domain\Test.Domain.csproj", "{DEDB9A59-29A2-4425-BB27-0C6AF40D508D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +40,12 @@ Global
 		{3CE36870-1E86-4151-9E19-AFCA03AE8EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CE36870-1E86-4151-9E19-AFCA03AE8EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CE36870-1E86-4151-9E19-AFCA03AE8EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDB9A59-29A2-4425-BB27-0C6AF40D508D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDB9A59-29A2-4425-BB27-0C6AF40D508D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDB9A59-29A2-4425-BB27-0C6AF40D508D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDB9A59-29A2-4425-BB27-0C6AF40D508D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DEDB9A59-29A2-4425-BB27-0C6AF40D508D} = {6C978CC9-B52E-4563-B4D2-585CF4FE7BB0}
 	EndGlobalSection
 EndGlobal
